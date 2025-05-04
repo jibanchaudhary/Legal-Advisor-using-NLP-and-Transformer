@@ -36,19 +36,19 @@ header{
       max-width: 540px;
     }
   }
-  
+
   @media (min-width: 768px) {
     .container {
       max-width: 720px;
     }
   }
-  
+
   @media (min-width: 992px) {
     .container {
       max-width: 960px;
     }
   }
-  
+
   @media (min-width: 1200px) {
     .container {
       max-width: 1152px;
@@ -165,7 +165,7 @@ section.about .social a img{
 }
 
 .section-heading{
-   color:var(--secondary); 
+   color:var(--secondary);
    text-align: center;
    margin-bottom:1rem;
    line-height: 0.5;
@@ -222,7 +222,7 @@ section.services .card-wrapper .card p{
 }
 
 section.services .card-wrapper .card:hover{
-    background: var(--dark);  
+    background: var(--dark);
 }
 section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
     color:var(--pure);
@@ -342,7 +342,7 @@ section.work .card-wrapper .card .card-content a:hover{
 }
 section.work .card-wrapper .card .card-content span{
    color:var(--ternary);
-   font-size:0.8rem; 
+   font-size:0.8rem;
 }
 section.work .card-wrapper .card .card-content p{
     font-family:'Lato', sans-serif;
@@ -395,7 +395,7 @@ section.blog .card-wrapper .card .card-content a:hover{
 }
 section.blog .card-wrapper .card .card-content span{
    color:var(--ternary);
-   font-size:0.8rem; 
+   font-size:0.8rem;
 }
 section.blog .card-wrapper .card .card-content p{
     font-family:'Lato', sans-serif;
@@ -453,7 +453,7 @@ section.contact .input-wrap-2 textarea{
     font-size: 0.9rem;
 }
 section.contact .input-wrap-2 textarea:focus, section.contact input:focus{
-    outline:none;  
+    outline:none;
 }
 section.contact .btn-wrapper{
     text-align: center;
@@ -534,7 +534,7 @@ footer .copyright{
    border: none;
    background:none;
    outline:none;
-   cursor: pointer; 
+   cursor: pointer;
 }
 .times img{
     width:30px;
@@ -729,7 +729,7 @@ footer .copyright{
 
 /* Default state: stars are gray initially */
 .feedback-container .rating label {
-    color: #ccc;  
+    color: #ccc;
 }
 
 .feedback-container .comment {

@@ -157,7 +157,7 @@
     <div class="container">
         <h1>Cyber Security Legal Advisor</h1>
         <p>Enter your legal query below, and we’ll provide the most relevant policy and incident.</p>
-        
+
         <form id="query-form" method="POST" action="{% url 'advisory:advisory_query' %}">
             {% csrf_token %}
             <div class="form-group">
@@ -167,7 +167,7 @@
             </div>
             <button type="submit" class="btn" id="submit-btn" disabled>Submit</button>
         </form>
-        
+
         <div id="results-container">
             {% if relevant_incident and relevant_policy %}
                 <div class="results">
@@ -184,13 +184,13 @@
             {% endif %}
         </div>
     </div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const queryInput = document.getElementById('query');
             const submitBtn = document.getElementById('submit-btn');
             const errorMessage = document.getElementById('error-message');
-            
+
             queryInput.addEventListener('input', function() {
                 if (queryInput.value.trim().length > 0) {
                     submitBtn.disabled = false;
@@ -200,7 +200,7 @@
                     errorMessage.style.display = 'block';
                 }
             });
-            
+
             document.getElementById('query-form').addEventListener('submit', function(e) {
                 if (queryInput.value.trim().length === 0) {
                     e.preventDefault();

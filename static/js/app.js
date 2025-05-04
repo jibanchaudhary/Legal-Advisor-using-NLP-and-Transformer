@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', function() {
         appendDots: '.slider-dots',
         dotsClass: 'dots'
     });
-  
+
     // Hamburger Menu
     let hamberger = document.querySelector('.hamberger');
     let times = document.querySelector('.times');
     let mobileNav = document.querySelector('.mobile-nav');
-  
+
     if (hamberger && times && mobileNav) {
         hamberger.addEventListener('click', function() {
             mobileNav.classList.add('open');
         });
-  
+
         times.addEventListener('click', function() {
             mobileNav.classList.remove('open');
         });
     }
-  
+
     // Chatbot Modal
     const chatbotBtn = document.getElementById('chatbot-btn');
     const chatbotModal = document.getElementById('chatbot-modal');
@@ -29,18 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendBtn = document.getElementById('send-btn');
     const userInput = document.getElementById('user-input');
     const chatbotMessages = document.getElementById('chatbot-messages');
-  
+
     // Open chatbot modal
     if (chatbotBtn && chatbotModal && closeBtn) {
         chatbotBtn.addEventListener('click', function() {
             chatbotModal.style.display = 'block'; // Show the modal
         });
-  
+
         closeBtn.addEventListener('click', function() {
             chatbotModal.style.display = 'none'; // Hide the modal
         });
     }
-  
+
     // Send message logic
     if (sendBtn && userInput && chatbotMessages) {
         sendBtn.addEventListener('click', function() {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 userInput.value = ''; // Clear input field
             }
         });
-  
+
         // Function to append messages to the chat window
         function appendMessage(message) {
             const p = document.createElement('p');
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             chatbotMessages.appendChild(p);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to bottom
         }
-  
+
         // Function to get bot responses (predefined answers)
         function getBotResponse(userText) {
             const responses = {
@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "hi":"hello, nice to meet you",
                 "default": "Sorry, I didn't understand that. Can you please rephrase?"
             };
-            
-  
+
+
             const response = responses[userText.toLowerCase()] || responses["default"];
             setTimeout(function() {
                 appendMessage('Bot: ' + response);
@@ -95,21 +95,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-    
 
-  
+
+
     // Feedback Form validation
     document.getElementById("feedbackForm").addEventListener("submit", function(event) {
         const rating = document.querySelector('input[name="rating"]:checked');
         const comment = document.getElementById("comment");
-  
+
         // Check if rating is selected
         if (!rating) {
             alert("Please provide a rating.");
             event.preventDefault(); // Prevent form submission
             return;
         }
-  
+
         // Check if comment is provided
         if (comment.value.trim() === "") {
             alert("Please provide your comments.");
@@ -118,22 +118,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
   });
-  
+
 
 
 // for lawai
 document.getElementById('queryForm').onsubmit = function(event) {
     event.preventDefault();
-    
+
     const queryText = document.getElementById('queryInput').value;
     const responseDiv = document.getElementById('response');
     const recommendationsDiv = document.getElementById('recommendations');
     const processingDiv = document.getElementById('processing');
-    
+
     responseDiv.innerHTML = '';
     recommendationsDiv.innerHTML = '';
     processingDiv.style.display = 'block'; // Show processing message
-    
+
     fetch('/query', {
         method: 'POST',
         headers: {
@@ -151,7 +151,7 @@ document.getElementById('queryForm').onsubmit = function(event) {
                 <p><strong>Title:</strong> ${data.relevant_incident.title}</p>
                 <p><strong>Description:</strong> ${data.relevant_incident.description}</p>
             `;
-            
+
             recommendationsDiv.innerHTML = `
                 <h2>Recommendations:</h2>
                 <p>${data.matched_crime_type}</p>

@@ -26,13 +26,17 @@ def record_text():
         print("Sorry, I did not understand that.")
     return None
 
+
 # Nepali-to-English Translation
 def nepali_trans(nepali_text):
     if nepali_text:
-        translated_text = GoogleTranslator(source='ne', target='en').translate(nepali_text)
+        translated_text = GoogleTranslator(source="ne", target="en").translate(
+            nepali_text
+        )
         print(f"Translated text: {translated_text}")
         return translated_text
     return None
+
 
 # Save Text to File
 def output_text(text, filename="output.txt"):
@@ -41,15 +45,17 @@ def output_text(text, filename="output.txt"):
             f.write(text + "\n")
         print(f"Text saved to {filename}")
 
+
 # Text Summarization Using BART
 def bart_edit(content):
-    return(rag_generate(content))
+    return rag_generate(content)
+
 
 # Generate Email Report Template
 def report_template(subject, reporter_name, edited_text):
     template = f"""
     To: Cyber Bureau
-    
+
     Subject: {subject}
 
     Dear Sir/Madam,
@@ -71,12 +77,17 @@ def report_template(subject, reporter_name, edited_text):
     """
     return template
 
+
 # Extract Fields from Text Using SpaCy
 def extracts_template_field(raw_content):
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(raw_content)
     subject_keywords = {
-        "scam", "fraud", "phishing", "unauthorized transactions", "identity theft"
+        "scam",
+        "fraud",
+        "phishing",
+        "unauthorized transactions",
+        "identity theft",
     }
     subject, reporter_name = None, None
 
@@ -103,27 +114,30 @@ def extracts_template_field(raw_content):
         "reporter_name": reporter_name,
     }
 
+
 # Send Email via Gmail API
 def send_email(content, subject, recipient_email, reporter_name):
-    CLIENT_SECRET_FILE = '/Users/jibanchaudhary/Documents/Projects/legal_assistance/legal_advisory_system/email_integration/client_secret.json'
-    API_NAME = 'gmail'
-    API_VERSION = 'v1'
-    SCOPES = ['https://mail.google.com/']
+    CLIENT_SECRET_FILE = "/Users/jibanchaudhary/Documents/Projects/legal_assistance/legal_advisory_system/email_integration/client_secret.json"
+    API_NAME = "gmail"
+    API_VERSION = "v1"
+    SCOPES = ["https://mail.google.com/"]
 
     service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, *SCOPES)
     mime_message = MIMEMultipart()
-    mime_message['to'] = 'jiban.077bct042@acem.edu.np'
-    mime_message['subject'] = subject
-    mime_message.attach(MIMEText(content, 'plain'))
+    mime_message["to"] = "jiban.077bct042@acem.edu.np"
+    mime_message["subject"] = subject
+    mime_message.attach(MIMEText(content, "plain"))
     raw_string = base64.urlsafe_b64encode(mime_message.as_bytes()).decode()
-    message = service.users().messages().send(userId='me', body={'raw': raw_string}).execute()
+    message = (
+        service.users().messages().send(userId="me", body={"raw": raw_string}).execute()
+    )
     return message
 
 
 def generate_email_summary(policy):
     context = f"""
     {policy}
-    
+
     Based on the above context, generate a concise yet detailed legal summary of this case no unnecessary words.
     """
 

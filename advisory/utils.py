@@ -9,10 +9,10 @@ nlp = spacy.load("en_core_web_sm")
 mixtral_llm = Ollama(model="mistral:7b", base_url="http://localhost:11434")
 
 
-
-#prompt for filtering
+# prompt for filtering
 filter_prompt = PromptTemplate(
-    template=('''
+    template=(
+        """
         You are a legal query classifier. Strictly categorize the following query as either 'Legal' or 'Non-Legal' based on cybercrime relevance:
 
         **Classify as 'Legal' ONLY if it explicitly involves:**
@@ -40,13 +40,16 @@ filter_prompt = PromptTemplate(
         - Ignore jurisdiction considerations - focus on incident nature
         - Default to 'Non-Legal' for ambiguous cases
 
-        **Response Format:** 
+        **Response Format:**
         Reply ONLY with 'Legal' or 'Non-Legal' - no explanations.
-              
+
         Query: {input_text}
-    '''),
-    input_variables=['input_text'],
+    """
+    ),
+    input_variables=["input_text"],
 )
+
+
 def filter_query(input_text):
     response = mixtral_llm(filter_prompt.format(input_text=input_text))
     return response.strip()
@@ -56,9 +59,10 @@ def filter_query(input_text):
 def check_for_names(text):
     doc = nlp(text)
     for ent in doc.ents:
-        if ent.label_ in ['PERSON', 'ORG']:  
-            return True 
-    return False 
+        if ent.label_ in ["PERSON", "ORG"]:
+            return True
+    return False
+
 
 # Function for general conversation
 def general_convo(input_text):
@@ -70,42 +74,42 @@ def general_convo(input_text):
         response = mixtral_llm(short_prompt)
         return response.strip()
 
+
 # Instance for general_convo tool
 general_convo_instance = Tool(
     name="General_conversation",
     func=general_convo,
-    description="Handles non-legal queries with a general conversation model "
+    description="Handles non-legal queries with a general conversation model ",
 )
 
 # function for legal queries
 def legal_convo():
-    return("Legal")
+    return "Legal"
 
 
 # Instance for legal_convo tool
 legal_convo_instance = Tool(
-    
     name="Legal_conversation",
     func=legal_convo,
-    description="Handles legal queries specifically by returning 'Legal'."
+    description="Handles legal queries specifically by returning 'Legal'.",
 )
 
-tools = [general_convo_instance,legal_convo_instance]
+tools = [general_convo_instance, legal_convo_instance]
 
 agent = initialize_agent(
     tools=tools,
-    llm = mixtral_llm,
-    agent=  AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    verbose = True,
+    llm=mixtral_llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True,
     handle_parsing_errors=True,
-    return_intermediate_steps=False
-    
+    return_intermediate_steps=False,
 )
+
 
 def run_agent(user_query):
     query_type = filter_query(user_query)
     if query_type == "Legal":
-        response = legal_convo() 
+        response = legal_convo()
         print("Legal Response: ", response)
         return response
     else:
@@ -113,7 +117,7 @@ def run_agent(user_query):
         print("General Response: ", response)
         return response
 
+
 def rag_generate(context):
     response = mixtral_llm.invoke(context)
     return response
-
