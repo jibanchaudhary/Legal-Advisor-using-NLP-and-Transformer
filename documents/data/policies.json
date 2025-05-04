@@ -1,0 +1,222 @@
+[
+  {
+    "law_id": "ETA-2063",
+    "section_id": "44",
+    "title": "Punishment for Pirating, Destroying, or Altering Computer Source Data",
+    "description": "If a person, knowingly or with malafide intention, pirates, destroys, or alters computer source code used for any computer, computer program, computer system, or computer network, or causes others to do so, he/she shall be punished with imprisonment not exceeding three years or a fine not exceeding Two Hundred Thousand Rupees or both.",
+    "penalty": {
+      "fine": "Up to Two Hundred Thousand Rupees",
+      "imprisonment": "Up to 3 years",
+      "both": true
+    }
+  },
+  {
+    "law_id": "ETA-2063",
+    "section_id": "45",
+    "title": "Punishment for Cyber Terrorism",
+    "description": "Any person who commits cyber terrorism or causes harm to national security or public order through electronic means shall be punished with imprisonment up to 5 years or a fine up to 500,000 Rupees or both.",
+    "penalty": {
+      "fine": "Up to 500,000 Rupees",
+      "imprisonment": "Up to 5 years",
+      "both": true
+    }
+  },
+  {
+    "law_id": "ETA-2063",
+    "section_id": "46",
+    "title": "Punishment for Unauthorized Access",
+    "description": "If a person accesses a computer, computer system, or network without authorization and causes damage or disruption, he/she shall be punished with imprisonment up to 3 years or a fine up to 200,000 Rupees or both.",
+    "penalty": {
+      "fine": "Up to 200,000 Rupees",
+      "imprisonment": "Up to 3 years",
+      "both": true
+    }
+  },
+  {
+    "law_id": "ETA-2063",
+    "section_id": "47",
+    "title": "Punishment for Publishing Offensive Material",
+    "description": "If a person publishes or displays material against morals, etiquette, hatred, or malice on a computer, internet, and other electronic media, the culprit can be punished with a fine of 1 lakh rupees or imprisonment for up to 5 years or both.",
+    "penalty": {
+      "fine": "1 lakh rupees",
+      "imprisonment": "Up to 5 years",
+      "both": true
+    }
+  },
+  {
+    "law_id": "ETA-2063",
+    "section_id": "48",
+    "title": "Compensation for Damages",
+    "description": "Any person convicted under this Act may be required to pay compensation for damages caused by their actions.",
+    "penalty": {
+      "fine": "Varies based on damage",
+      "imprisonment": "Varies based on case",
+      "both": false
+    }
+  },
+  {
+    "law_id": "ETA-2063",
+    "section_id": "75",
+    "title": "Compensation for Victims",
+    "description": "Victims of cyber crimes may seek compensation through legal proceedings, and the courts may award damages based on the severity of the crime and the loss suffered.",
+    "penalty": {
+      "fine": "Based on court decision",
+      "imprisonment": "Varies based on case",
+      "both": false
+    }
+  },
+  {
+    "law_id": "CA-1992",
+    "section_id": "36",
+    "title": "Punishment for Unauthorized Access and Data Theft",
+    "description": "Individuals convicted of unauthorized access to data or data theft may face imprisonment and fines as specified under the Child Rights Act of 2075.",
+    "penalty": {
+      "fine": "Varies based on case",
+      "imprisonment": "Up to 6 months",
+      "both": true
+    }
+  },
+  {
+    "law_id": "ITA-2000",
+    "section_id": "79",
+    "title": "Liability of Intermediaries",
+    "description": "Intermediaries, such as online platforms, are not liable for user-generated content unless they fail to act upon receiving knowledge of the unlawful content.",
+    "penalty": {
+      "fine": "Varies based on case",
+      "imprisonment": "Varies based on case",
+      "both": false
+    }
+  },
+  {
+    "law_id": "Patent",
+    "section_id": "Not Specified",
+    "title": "Patent for Pharmaceuticals",
+    "description": "This policy deals with the patenting of pharmaceutical products and modifications thereof. It involves determining the novelty and inventiveness of the drug for patent protection.",
+    "penalty": {
+      "fine": "Varies based on case",
+      "imprisonment": "Varies based on case",
+      "both": false
+    }
+  },
+  {
+    "law_id": "Citizenship",
+    "section_id": "Not Specified",
+    "title": "Citizen Data Protection",
+    "description": "Guidelines and regulations for protecting Citizen data, including responsibilities of entities handling citizen information and measures for data security.",
+    "penalty": {
+      "fine": "Varies based on case",
+      "imprisonment": "Varies based on case",
+      "both": false
+    }
+  },
+  {
+    "law_id": "Prn_con-101",
+    "section_id": "1",
+    "title": "Punishment for Distribution of Illegal Pornographic Content",
+    "description": "If a person distributes, shares, or sells pornographic content that is illegal under local laws, including content involving minors or non-consensual material, he/she shall be punished with imprisonment up to 7 years or a fine up to 1,000,000 Nepalese Rupees or both.",
+    "penalty": {
+        "fine": "-----------",
+        "imprisonment": "Up to 7 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "Prn_con-102",
+    "section_id": "2",
+    "title": "Punishment for Facilitating Access to Pornographic Content by Minors",
+    "description": "If a person facilitates, provides, or fails to prevent access to pornographic content to individuals under the age of 18, he/she shall be punished with imprisonment up to 3 years or a fine up to 500,000 Nepalese Rupees or both.",
+    "penalty": {
+        "fine": "-----------",
+        "imprisonment": "Up to 3 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "Prn_con-103",
+    "section_id": "3",
+    "title": "Punishment for Creation and Distribution of Child Pornography",
+    "description": "If a person creates, distributes, or possesses child pornography, he/she shall be punished with imprisonment up to 15 years and a fine up to 2,000,000 Nepalese Rupees. This includes all forms of child exploitation material.",
+    "penalty": {
+        "fine": "-----------",
+        "imprisonment": "Up to 15 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "Prn_con-104",
+    "section_id": "4",
+    "title": "Punishment for Uploading and Sharing Pornographic Content on Social Media",
+    "description": "If a person uploads, shares, or posts pornographic content on social media platforms without consent or in violation of the platform's terms, he/she shall be punished with imprisonment up to 5 years or a fine up to 750,000 Nepalese Rupees or both.",
+    "penalty": {
+        "fine": "-----------",
+        "imprisonment": "Up to 5 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "Prn_con-105",
+    "section_id": "5",
+    "title": "Punishment for Production of Pornographic Content without Consent",
+    "description": "If a person produces or records pornographic content involving individuals without their consent, he/she shall be punished with imprisonment up to 8 years or a fine up to 1,500,000 Nepalese Rupees or both.",
+    "penalty": {
+        "fine": "-----------",
+        "imprisonment": "Up to 8 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "FB-101",
+    "section_id": "1",
+    "title": "Punishment for Unauthorized Access to Facebook Accounts",
+    "description": "If a person gains unauthorized access to a Facebook account through hacking, phishing, or any other means, and uses or distributes the account's information unlawfully, he/she shall be punished with imprisonment up to 2 years or a fine up to 150,000 Rupees or both.",
+    "penalty": {
+        "fine": "Up to 150,000 Rupees",
+        "imprisonment": "Up to 2 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "FB-102",
+    "section_id": "2",
+    "title": "Punishment for Cyber Harassment on Facebook",
+    "description": "If a person uses Facebook to harass, intimidate, or threaten another individual, including sending abusive messages or posting harmful content, he/she shall be punished with imprisonment up to 1 year or a fine up to 100,000 Rupees or both.",
+    "penalty": {
+        "fine": "Up to 100,000 Rupees",
+        "imprisonment": "Up to 1 year",
+        "both": true
+    }
+  },
+  {
+    "law_id": "FB-103",
+    "section_id": "3",
+    "title": "Punishment for Online Fraud via Facebook",
+    "description": "If a person commits fraud on Facebook, including creating fake profiles for financial gain, scamming users, or engaging in deceptive practices, he/she shall be punished with imprisonment up to 5 years or a fine up to 500,000 Rupees or both.",
+    "penalty": {
+        "fine": "Up to 500,000 Rupees",
+        "imprisonment": "Up to 5 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "FB-104",
+    "section_id": "4",
+    "title": "Punishment for Data Breach and Privacy Violations on Facebook",
+    "description": "If a person illegally accesses, shares, or uses private information obtained from Facebook without consent, leading to a breach of privacy, he/she shall be punished with imprisonment up to 3 years or a fine up to 300,000 Rupees or both.",
+    "penalty": {
+        "fine": "Up to 300,000 Rupees",
+        "imprisonment": "Up to 3 years",
+        "both": true
+    }
+  },
+  {
+    "law_id": "FB-105",
+    "section_id": "5",
+    "title": "Punishment for Spreading Misinformation or Fake News on Facebook",
+    "description": "If a person spreads false information or fake news on Facebook with the intent to deceive or cause harm, leading to public disturbance or other adverse effects, he/she shall be punished with imprisonment up to 2 years or a fine up to 200,000 Rupees or both.",
+    "penalty": {
+        "fine": "Up to 200,000 Rupees",
+        "imprisonment": "Up to 2 years",
+        "both": true
+    }
+  }
+]

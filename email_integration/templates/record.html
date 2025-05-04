@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Integration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Record and Transcribe</h1>
+    <button id="recordBtn">Record Audio</button>
+
+    <div id="result">
+        <h3>Transcription:</h3>
+        <p id="nepaliText"></p>
+        <h3>Translated Text:</h3>
+        <p id="englishText"></p>
+    </div>
+
+    <div id="emailPreview" style="display:none;">
+        <h3>Email Preview:</h3>
+        <pre id="previewContent"></pre>
+        <p><strong>Subject:</strong> <span id="previewSubject"></span></p>
+        <p><strong>Reporter Name:</strong> <span id="previewReporter"></span></p>
+    </div>
+
+    <button id="previewEmailBtn" style="display:none;">Preview Email</button>
+    <button id="sendEmailBtn" style="display:none;">Send Email</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#recordBtn').click(function() {
+                $.ajax({
+                    url: '{% url "email_integration:record_audio" %}',
+                    type: 'POST',
+                    data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                    },
+                    success: function(response) {
+                        if (response.error) {
+                            alert(response.error);
+                        } else {
+                            $('#nepaliText').text(response.nepali_text);
+                            $('#englishText').text(response.english_text);
+
+                            // Show the Preview Email button
+                            $('#previewEmailBtn').show();
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred while recording.');
+                    }
+                });
+            });
+
+            $('#previewEmailBtn').click(function() {
+                const transcription = $('#englishText').text();
+                $.ajax({
+                    url: '{% url "email_integration:send_transcribed_email" %}',
+                    type: 'POST',
+                    data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                        transcription: transcription,
+                        preview: true, // Add preview flag
+                    },
+                    success: function(response) {
+                        if (response.email_content) {
+                            $('#previewContent').text(response.email_content);
+                            $('#previewSubject').text(response.subject);
+                            $('#previewReporter').text(response.reporter_name);
+                            $('#emailPreview').show();
+
+                            // Show the Send Email button
+                            $('#sendEmailBtn').show();
+                        } else if (response.error) {
+                            alert(response.error);
+                        }
+                    },
+                    error: function() {
+                        alert('Failed to preview the email.');
+                    }
+                });
+            });
+
+            $('#sendEmailBtn').click(function() {
+                const transcription = $('#englishText').text();
+                $.ajax({
+                    url: '{% url "email_integration:send_transcribed_email" %}',
+                    type: 'POST',
+                    data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                        transcription: transcription,
+                    },
+                    success: function(response) {
+                        if (response.status) {
+                            alert(response.status);
+                        } else if (response.error) {
+                            alert(response.error);
+                        }
+                    },
+                    error: function() {
+                        alert('Failed to send the email.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

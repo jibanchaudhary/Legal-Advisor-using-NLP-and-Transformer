@@ -1,0 +1,310 @@
+{
+  "labels": [
+    "Cyber Harassment",
+    "Cyberbullying",
+    "Phishing",
+    "Fake Prize or Contest Scams",
+    "Account Compromise",
+    "Extortion",
+    "Intimidation",
+    "Travel Scam",
+    "Name-Calling",
+    "Brute-Force Attack",
+    "Cyberstalking",
+    "Online Dating Blackmail",
+    "Inappropriate Photos",
+    "Inappropriate Videos",
+    "Doxxing",
+    "Defamation",
+    "Stalking",
+    "Online Shaming",
+    "Trolling",
+    "Poll Manipulation",
+    "E-commerce Sabotage",
+    "API Key Theft",
+    "SQL Injection",
+    "Cloud Storage Breach",
+    "Harassment",
+    "Fraudulent Bank Transfer",
+    "Identity Theft",
+    "Unauthorized Charges",
+    "Fake Transaction",
+    "Social Media Impersonation",
+    "Online Threats",
+    "Cryptocurrency Scam",
+    "Nudity",
+    "Sextortion",
+    "Health Insurance Fraud",
+    "Malware Infection",
+    "Credit Card Fraud",
+    "Online Gambling Fraud",
+    "Online Job Scam",
+    "SIM Card Cloning",
+    "Fake Scholarship and Admission Scams",
+    "Catfishing",
+    "Fake Technical Support Scam",
+    "Fake Charity Scam",
+    "Leaked Video",
+    "Online Auction Fraud",
+    "Illegal Streaming and Piracy",
+    "Fake Healthcare Products",
+    "Online Election Scams",
+    "E-Visa Scams",
+    "Computer Virus",
+    "Ransomware Attack",
+    "Spyware",
+    "Trojan",
+    "Cyberbullying Involving Minors",
+    "Online Impersonation",
+    "Data Breach",
+    "Zero-Day Exploit",
+    "Fake Cheque Scam",
+    "SIM Swap Fraud",
+    "Data Theft",
+    "Romance Fraud",
+    "Keylogger",
+    "Denial-of-Service Attack",
+    "Botnet",
+    "Employment Scam",
+    "Unauthorized Access",
+    "Social Engineering Attack",
+    "Worm",
+    "Revenge Porn",
+    "Online Money Scam",
+    "Non-Delivery of Goods or Services",
+    "Adware Attack",
+    "Malicious Software",
+    "Tax Related Scam",
+    "Man-in-the-Middle Attack"
+  ],
+"label_sentences": {
+    "Cyber Harassment": [
+      "Cyber harassment involves the persistent use of digital communication to threaten, humiliate, or target someone."
+    ],
+    "Cyberbullying": [
+      "Cyberbullying is the act of intimidating or harassing someone using online platforms and digital communication."
+    ],
+    "Phishing": [
+      "Phishing is a fraudulent attempt to obtain sensitive information by pretending to be a trustworthy entity."
+    ],
+    "Fake Prize or Contest Scams": [
+      "Fake prize scams deceive victims by promising false rewards in exchange for personal or financial details."
+    ],
+    "Account Compromise": [
+      "Account compromise occurs when unauthorized users gain access to personal or professional accounts."
+    ],
+    "Extortion": [
+      "Extortion involves threats or coercion to obtain money, information, or other resources from a victim."
+    ],
+    "Intimidation": [
+      "Intimidation online includes using threats or aggressive behavior to instill fear in others."
+    ],
+    "Travel Scam": [
+      "Travel scams trick individuals into paying for fake vacations, accommodations, or travel deals."
+    ],
+    "Name-Calling": [
+      "Name-calling in a digital context refers to using offensive or derogatory terms to insult someone online."
+    ],
+    "Brute-Force Attack": [
+      "A brute-force attack involves systematically attempting every possible password combination to gain unauthorized access."
+    ],
+    "Cyberstalking": [
+      "Cyberstalking refers to the repeated and intrusive tracking or monitoring of someone online."
+    ],
+    "Online Dating Blackmail": [
+      "Online dating blackmail involves using sensitive information obtained through dating platforms to extort victims."
+    ],
+    "Inappropriate Photos": [
+      "Sharing or distributing inappropriate photos online without consent is a violation of privacy and decency."
+    ],
+    "Inappropriate Videos": [
+      "The distribution or possession of inappropriate videos without consent is an act of online misconduct."
+    ],
+    "Doxxing": [
+      "Doxxing is the act of publicly revealing private or sensitive information about someone without their consent."
+    ],
+    "Defamation": [
+      "Defamation online refers to false statements made to damage someone's reputation."
+    ],
+    "Stalking": [
+      "Stalking in the digital age includes persistent and unwelcome monitoring of someone's activities online."
+    ],
+    "Online Shaming": [
+      "Online shaming is the act of publicly humiliating someone on digital platforms, often leading to social ridicule."
+    ],
+    "Trolling": [
+      "Trolling involves posting inflammatory or disruptive comments online to provoke others."
+    ],
+    "Poll Manipulation": [
+      "Poll manipulation occurs when individuals or groups tamper with online surveys to distort results."
+    ],
+    "E-commerce Sabotage": [
+      "E-commerce sabotage includes malicious activities aimed at disrupting online stores or damaging their reputation."
+    ],
+    "API Key Theft": [
+      "API key theft involves stealing access keys to exploit or misuse software systems."
+    ],
+    "SQL Injection": [
+      "SQL injection is a technique where malicious SQL code is used to exploit and manipulate databases."
+    ],
+    "Cloud Storage Breach": [
+      "A cloud storage breach occurs when unauthorized users gain access to files stored in cloud services."
+    ],
+    "Harassment": [
+      "Online harassment includes repeated and unwelcome behavior intended to distress or harm someone."
+    ],
+    "Fraudulent Bank Transfer": [
+      "Fraudulent bank transfers involve unauthorized transactions to steal money from victims' accounts."
+    ],
+    "Identity Theft": [
+      "Identity theft is the act of stealing someone's personal information for fraudulent activities, such as using stolen data to create deepfake images or videos to impersonate the victim and commit further crimes."
+    ],
+    "Unauthorized Charges": [
+      "Unauthorized charges refer to transactions made without the account holder's consent."
+    ],
+    "Fake Transaction": [
+      "A fake transaction is a deceptive activity where no legitimate exchange of goods or services occurs."
+    ],
+    "Social Media Impersonation": [
+      "Social media impersonation involves creating fake profiles to deceive or harm others."
+    ],
+    "Online Threats": [
+      "Online threats involve making explicit or implied promises of harm through digital communication."
+    ],
+    "Cryptocurrency Scam": [
+      "Cryptocurrency scams involve fraudulent schemes designed to steal digital assets or investments."
+    ],
+    "Nudity": [
+      "The sharing of nude images online often raises concerns about privacy and consent."
+    ],
+    "Sextortion": [
+      "Sextortion involves threats to reveal explicit content unless demands are met."
+    ],
+    "Health Insurance Fraud": [
+      "Health insurance fraud includes submitting false claims to receive unauthorized benefits."
+    ],
+    "Malware Infection": [
+      "A malware infection occurs when malicious software compromises a computer or network."
+    ],
+    "Credit Card Fraud": [
+      "Credit card fraud is the unauthorized use of a cardholder's information for financial gain."
+    ],
+    "Online Gambling Fraud": [
+      "Online gambling fraud involves manipulating betting platforms to cheat or deceive users."
+    ],
+    "Online Job Scam": [
+      "Online job scams lure victims with fake employment offers to steal personal or financial information."
+    ],
+    "SIM Card Cloning": [
+      "SIM card cloning duplicates a SIM to gain unauthorized access to calls and messages."
+    ],
+    "Fake Scholarship and Admission Scams": [
+      "Fake scholarship scams deceive students by promising non-existent educational opportunities."
+    ],
+    "Catfishing": [
+      "Catfishing is the act of creating a fake identity online to deceive others."
+    ],
+    "Fake Technical Support Scam": [
+      "Fake technical support scams trick users into paying for unnecessary or fraudulent services."
+    ],
+    "Fake Charity Scam": [
+      "Fake charity scams exploit people's generosity by soliciting donations for non-existent causes."
+    ],
+    "Leaked Video": [
+      "A leaked video refers to private footage shared online without the owner's consent."
+    ],
+    "Online Auction Fraud": [
+      "Online auction fraud involves deceptive practices in online bidding platforms."
+    ],
+    "Illegal Streaming and Piracy": [
+      "Illegal streaming and piracy distribute copyrighted content without authorization."
+    ],
+    "Fake Healthcare Products": [
+      "Fake healthcare products deceive consumers with false claims or counterfeit items."
+    ],
+    "Online Election Scams": [
+      "Online election scams aim to manipulate voters or influence election outcomes through deceit."
+    ],
+    "E-Visa Scams": [
+      "E-visa scams trick travelers with fraudulent visa services."
+    ],
+    "Computer Virus": [
+      "A computer virus is malicious software designed to disrupt or damage computer systems."
+    ],
+    "Ransomware Attack": [
+      "A ransomware attack encrypts a victim's data and demands payment for its release."
+    ],
+    "Spyware": [
+      "Spyware is software that secretly monitors and collects information about a user's activity."
+    ],
+    "Trojan": [
+      "A Trojan is a malicious program disguised as legitimate software to compromise systems."
+    ],
+    "Cyberbullying Involving Minors": [
+      "Cyberbullying involving minors targets young individuals with harmful online behavior."
+    ],
+    "Online Impersonation": [
+      "Online impersonation is the act of pretending to be someone else on digital platforms."
+    ],
+    "Data Breach": [
+      "A data breach is an incident where sensitive information is exposed without authorization."
+    ],
+    "Zero-Day Exploit": [
+      "A zero-day exploit leverages undiscovered vulnerabilities in software for malicious purposes."
+    ],
+    "Fake Cheque Scam": [
+      "Fake cheque scams involve counterfeit cheques to defraud victims."
+    ],
+    "SIM Swap Fraud": [
+      "SIM swap fraud tricks service providers into transferring a victim's phone number to a new SIM card."
+    ],
+    "Data Theft": [
+      "Data theft is the unauthorized copying or extraction of sensitive information."
+    ],
+    "Romance Fraud": [
+      "Romance fraud involves building a fake romantic relationship to exploit or defraud victims."
+    ],
+    "Keylogger": [
+      "A keylogger records keystrokes to capture sensitive information like passwords and credit card numbers."
+    ],
+    "Denial-of-Service Attack": [
+      "A denial-of-service attack disrupts services by overwhelming systems with traffic."
+    ],
+    "Botnet": [
+      "A botnet is a network of compromised devices controlled by malicious actors."
+    ],
+    "Employment Scam": [
+      "Employment scams deceive individuals with fake job offers to steal personal or financial details."
+    ],
+    "Unauthorized Access": [
+      "Unauthorized access involves gaining entry into systems or networks without permission."
+    ],
+    "Social Engineering Attack": [
+      "A social engineering attack manipulates individuals into revealing sensitive information."
+    ],
+    "Worm": [
+      "A worm is self-replicating malware that spreads across networks without human intervention."
+    ],
+    "Revenge Porn": [
+      "Revenge porn is the sharing of explicit images or videos without consent, often for retaliation, and can now also involve the creation and distribution of deepfake images or videos that falsely depict someone in explicit situations."
+    ],
+    "Online Money Scam": [
+      "Online money scams involve deceptive tactics to steal funds from victims."
+    ],
+    "Non-Delivery of Goods or Services": [
+      "Non-delivery scams promise goods or services that are never delivered after payment."
+    ],
+    "Adware Attack": [
+      "An adware attack bombards users with excessive advertisements, often redirecting to malicious sites."
+    ],
+    "Malicious Software": [
+      "Malicious software encompasses programs designed to harm or exploit systems."
+    ],
+    "Tax Related Scam": [
+      "Tax-related scams exploit taxpayers with fraudulent claims or impersonation."
+    ],
+    "Man-in-the-Middle Attack": [
+      "A man-in-the-middle attack intercepts communication between parties to steal or alter information."
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "fake_or_hacked_id": [
+    "identity theft", "social media impersonation", "account hacking", "social media account takeover",
+    "catfishing", "online impersonation", "identity fraud", "id theft", "fake", "fake profile", 
+    "business email compromise", "unauthorized access", "hacked id", "hacked facebook", 
+    "fake scholarship and admission scams", "fake healthcare products", "fake prize or contest scams", 
+    "fraudulent bank transfer", "fake transaction", "fake cheque scam", "fake charity scam", 
+    "fake technical support scam", "unauthorized charges", "Fake Prize or Contest Scams","Fake Transaction","Fake Scholarship and Admission Scams",
+    "Fake Healthcare Products","Fake Technical Support Scam",
+    "Identity Theft",
+    "Social Engineering Attack",
+    "SIM Swap Fraud",
+    "SIM Card Cloning"
+  ],
+  "obscene_content": [
+    "revenge porn", "sextortion", "cyber harassment", "cyberbullying", "cyberbullying involving minors", 
+    "online dating blackmail", "inappropriate photos", "inappropriate videos", "doxxing", 
+    "defamation", "stalking", "online shaming", "trolling", "name-calling", "nudity", "adult content", 
+    "online threats", "leaked video", "unauthorized photo", "private image", "image-based abuse", 
+    "sexual harassment online", "inappropriate", "non-consensual photo", "privacy violation", "violent", "leak","Leaked Video",
+        "Revenge Porn"
+  ],
+  "online_financial_fraud": [
+    "online scam", "phishing", "credit card fraud", "financial cyber crime", "investment scam", 
+    "cryptocurrency scam", "fake charity fraud", "fake technical support scam", "health insurance fraud", 
+    "tax-related scam", "fake lottery or sweepstakes", "non-delivery of goods or services", 
+    "employment scam", "unwanted subscription", "unauthorized charges", "email phishing", "fake transaction", 
+    "scam", "fraudulent bank transfer", "SIM swap fraud", "romance fraud", "fake cheque scam", 
+    "SIM card cloning", "fake healthcare products", "online money scam", "fake scholarship and admission scams", "E-commerce Sabotage",
+    "Fake Prize or Contest Scams",
+    "Fake Transaction",
+    "Fake Scholarship and Admission Scams",
+    "Fake Healthcare Products",
+    "Fake Technical Support Scam",
+    "Health Insurance Fraud",
+    "Ransomware Attack",
+    "Romance Fraud"
+  ],
+  "cyberbullying_harassment": [
+    "cyberbullying", "cyberstalking", "cyber harassment", "online bullying", "trolling", 
+    "threats online", "stalking", "harassment", "blackmail", "defamation", "bullying", 
+    "intimidation", "social engineering attack", "extortion", "online shaming", "name-calling", 
+    "revenge porn", "cyberbullying involving minors","Intimidation",
+        "Trolling",
+        "Poll Manipulation"
+  ],
+  "others": [
+    "malware infection", "virus", "ransomware attack", "spyware", "trojan", "worm", "adware", 
+    "malicious software", "social engineering attack", "phishing through social media", 
+    "data breach", "account takeover", "system hacked", "phone hacked", "spy", "source code", 
+    "copyright infringement", "denial-of-service attack", "botnet", "zero-day exploit", "SQL injection", 
+    "API key theft", "cloud storage breach","Adware Attack","data theft","Brute-Force Attack",
+        "Cloud Storage Breach",
+        "Malware Infection",
+        "Phishing through Social Media",
+        "SQL Injection",
+        "Trojan",
+        "Worm"
+  ]
+}

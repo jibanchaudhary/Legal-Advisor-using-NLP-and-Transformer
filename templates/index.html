@@ -1,0 +1,242 @@
+{% load static %}
+{% comment %} <script src="{% static 'js/app.js' %}"></script> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CyberLawAI</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="site-main-wrapper">
+        <button class="hamberger">
+            <img src="{% static 'images/hamberger.svg' %}" alt="">
+        </button>
+
+        <div class="mobile-nav">
+            <button class="times"><img src="{% static 'images/times.svg' %}" alt="Close"></button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Notices</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav id="main-nav" class="flex items-center justify-between">
+                    <div class="left flex items-center">
+                        <div class="branding">
+                            <img src="{% static 'images/LawAILogo.png' %}" alt="Logo">
+                        </div>
+                        <div>
+                            <a href="#">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#work">Notices</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="btn btn-primary">
+                            <a href="{% url 'users:user_login' %}" style="color: inherit; text-decoration: none;">Login</a>
+                        </button>
+                    </div> 
+                </nav>
+                <div class="hero flex items-center justify-between">
+                    <div class="left flex-1 flex justify-center">
+                        <img src="{% static 'images/1.png' %}" alt="AI Illustration">
+                    </div>
+                    <div class="right flex-1">
+                        <h6>CYBER LAW AI V1.1</h6>
+                        <p>"Disclaimer: Results are suggestions and not legally binding!"</p>
+                        <h1>AI-powered legal <span>advisor for cybercrime</span></h1>
+                        <p>An AI-powered legal advisor provides quick, accurate legal insights and guidance...</p>
+                        <button class="btn btn-secondary">
+                            <a href="{% url 'advisory:advisory_query' %}" style="color: inherit; text-decoration: none;">TRY NOW</a>
+                        </button>
+                        {% comment %} <button class="btn btn-secondary">
+                            <a href="{% url 'email_integration:record_page' %}" style="color: inherit; text-decoration: none;">Start Recording</a>
+                        </button> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="about" class="about">
+            <div class="container flex items-center about-inner-wrap">
+                <div class="flex-1">
+                    <img class="about-me-img" src="{% static 'images/3.png' %}" alt="About Us">
+                </div>
+                <div class="flex-1 right">
+                    <h1>About <span>Us</span></h1>
+                    <h3>Hello and Welcome to Cyber Law AI</h3>
+                    <pr>we are dedicated to empowering individuals and businesses with the knowledge and tools to combat and understand cybercrime. Our AI-powered legal advisor platform specializes in providing accurate, real-time information about cybercrime laws, legal procedures, and relevant incidents. <br>We aim to bridge the knowledge gap and help users navigate the complex legal landscape surrounding cybercrime.<br>
+                    <br><h1>The Technology<span> Behind It</span></h1>
+
+                    <br>Our AI technology is trained on vast datasets of cybercrime-related legal documents, case law, and regulations. This allows our platform to provide accurate, context-aware legal information and recommendations. As the landscape of cybercrime evolves, our AI adapts, continuously updating to reflect the latest laws and incidents, ensuring that you stay informed.</pr><br>
+                    
+                </div>
+            </section>
+            <section id="work" class="work">
+                <div class="container">
+                    <h1 class="section-heading"><span>Stay Ahead</span> with Our Notices</h1>
+                    <p> Stay up-to-date with important announcements, updates, and key information that impacts our community and services. Our Notice section provides you with timely alerts on system updates, new features, upcoming events, and other crucial details you need to know. Make sure to check back regularly for the latest news and stay informed<p>
+    
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src= "{% static 'images/LawAI2.png' %}"  alt="">
+                            </div>
+                            <div class="card-content">
+                                <a href="#">
+                                    <h1>Concise disclaimer for your site</h1>
+                                </a>
+                                <p>All results provided are suggestions based on available information and are not legally binding. For formal legal advice, please consult a qualified professional.
+                                </p>
+                                <a href="#" style="color: rgb(57, 132, 201);" target="_blank"></a>
+    
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src= "{% static 'images/notice1.png' %}" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a href="#">
+                                    <h1>Stay alert against fraudulent posts and links on social media</h1>
+                                </a>
+                                <span>1 Jan, 2025</span>
+                                <p>Stay alert against fraudulent posts and links on social media that misuse the name and logo of organizations like Nepal Telecom to promote fake offers. Avoid clicking on suspicious links, and always verify any promotions directly with the official sources to prevent falling victim to scams.</p>
+                                <a href="#" style="color: rgb(57, 132, 201);" target="_blank"></a>          
+                                          </div>
+                        </div>
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src= "{% static 'images/notice2.png' %}" alt="">
+                            </div>
+                            <div class="card-content">
+                                <a href="#">
+                                    <h1>Cyber Safety Tips.</h1>
+                                </a>
+                                <span>Dec 10, 2024</span>
+                                <p>Beware of online job scams promising easy tasks with small payments initially, followed by requests for larger investments. Such schemes are on the rise, targeting unsuspecting individuals. Stay vigilant and refrain from engaging with these offers to protect yourself from financial fraud..</p>
+                                    <a href="#" style="color: rgb(57, 132, 201);" target="_blank"></a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <div class="container">
+                    <h1 class="section-heading"><span>Development &</span> Management Teams</h1>
+                    <p>We are committed to continuously improving this AI-powered legal advisor for even greater accuracy and efficiency.</p>
+                    <div class="slider">
+                        
+                        <div class="slide">
+                            <img src="{% static 'images/supervisor.png' %}"alt="">
+                            <p>"Received M.Sc.(Engineering) from the State Engineering University of Armenia, in 1994 and Ph.D. from Nagoya University, Japan, in 2004.He was a Research Fellow at NICT, Tokyo (2004–2007), working on rainfall rate retrieval for the Global Precipitation Measurement Satellite. Since 2007, he has been an Associate Professor at IOE, Pulchowk Campus, Tribhuvan University. He has published 40+ high-impact research articles and authored four books. His research interests include 5G and beyond networks, IoT, quantum computing, AI-based signal processing, and microwave wireless communications"</p>
+                            <span>-  Dr. Nanda Bikram Adhikari, Supervisor </span><br>
+                            <h3>We Value Your Feedback</h3><br>
+                          
+
+                            </button>
+                        </div> 
+                        <div class="slide">
+                            <img src="{% static 'images/man-2.png' %}" alt="">
+                            <p>"Former developer with expertise in AI-powered systems, specializing in legal technology solutions and innovative software development for complex applications."</p>
+                            <span>-  Gauri Shankar Sah, Developer</span><br>
+                            <h3>We Value Your Feedback</h3><br>
+                           
+                        </div>
+
+                        <div class="slide">
+                            <img src="{% static 'images/jiban.png' %}" alt="">
+                            <p>"Skilled software developer with a background in AI and machine learning, focused on building intelligent systems for legal applications and cybercrime law"</p>
+                            <span>-  Jiban Chaudhary, Developer</span><br>
+                            <h3>We Value Your Feedback</h3><br>
+    
+                        </div>
+
+                        <div class="slide">
+                            <img src="{% static 'images/nawraj.png' %}" alt="">
+                            <p>"Developer with expertise in designing AI-powered applications, committed to advancing legal technology and providing scalable solutions for complex legal challenges."</p>
+                            <span>-  Nawraj Basnet, Developer</span><br>
+                            <h3>We Value Your Feedback</h3><br>
+                    
+                        </div>
+                    </div>
+                    <div class="slider-dots"></div>
+                </div>
+            </section>
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h1 class="section-heading">Contact <span>Us</span></h1>
+                    <p>We provide "Right AI-Powered Solution for Right Security" for your business solutions.</p>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <img src="{% static 'images/phone.svg' %}" alt="">
+                            <h1>Call Us On</h1>
+                            <h6>+977 9813234181</h6>
+                        </div>
+                        <div class="card">
+                            <img src="{% static 'images/msg.svg' %}"alt="">
+                            <h1>Email Us At</h1>
+                            <h6>Legalassistance043@gmail.com</h6>
+                        </div>
+                        <div class="card">
+                            <img src="{% static 'images/map.svg' %}" alt="">
+                            <h1>Visit Office</h1>
+                            <h6>Advanced College of Engineering & Management<br>Kalanki, Kathmandu</h6>
+                        </div>
+                    </div>
+            
+                    <h1 class="section-heading">Customer Inquiry <span>Form</span></h1>
+                    <p>We ensure your data is protected with the highest standards of security and confidentiality.</p>
+                    <div class="contact-right">
+                        <form name="Feedback-form" method="post" action="{% url 'users:submit_feedback' %}">
+                            {% csrf_token %}
+                            <div class="input-wrap">
+                                <input type="text" name="name" placeholder="Your Name *" required>
+                                <input type="email" name="email" placeholder="Your Email *" required>
+                                <input type="tel" name="phone" placeholder="Your Phone *" required>
+                                <input type="text" name="company" placeholder="Your Company Name *" required>
+                                <input type="text" name="country" placeholder="Your Country Name *" required>
+                                <input type="text" name="job_title" placeholder="Your Job Title *" required>
+                                <input type="text" name="queries" placeholder="Place your queries"></input>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                        {% comment %} <span id="msg"></span> {% endcomment %}
+                    </div>                             
+                </div>
+            </section>
+<!-- 
+        <footer>
+            <img class="footer-logo" src="{% static 'images/LawAI.png' %}" alt="Logo">
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/"><img src="{% static 'images/facebook.svg' %}" alt="Facebook"></a>
+                <a href="https://x.com/"><img src="{% static 'images/twitter.svg' %}" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/"><img src="{% static 'images/linkedin.svg' %}" alt="LinkedIn"></a>
+            </div>
+        </footer> -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+
+</html>

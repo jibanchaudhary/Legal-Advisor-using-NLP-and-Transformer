@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Advisory System - Query Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'advisory/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000; /* Black background */
+            margin: 0;
+            padding: 0;
+            color: #ffffff; /* White text for readability */
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: #1e1e1e; /* Dark gray for container contrast */
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #bbbbbb;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #cccccc;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            background-color: #2e2e2e;
+            color: #ffffff;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #4dabff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(77, 171, 255, 0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            color: white;
+            background-color: #4dabff; /* Vibrant blue for button */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #009dff; /* Brighter blue on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 157, 255, 0.4);
+        }
+
+        .btn:disabled {
+            background-color: #555555;
+            cursor: not-allowed;
+        }
+
+        .results, .no-results {
+            margin-top: 30px;
+        }
+
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .result-card {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .result-card p {
+            margin: 5px 0;
+            color: #bbbbbb;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            background-color: #4f1e1e;
+            color: #f8d7da;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+
+        .error-message {
+            color: #ff4d4d;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Security Legal Advisor</h1>
+        <p>Enter your legal query below, and we’ll provide the most relevant policy and incident.</p>
+        
+        <form id="query-form" method="POST" action="{% url 'advisory:advisory_query' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="query">Your Query:</label>
+                <textarea name="query" id="query" class="form-control" rows="5" placeholder="Type your query here..." required></textarea>
+                <p class="error-message" id="error-message">Please enter a valid query.</p>
+            </div>
+            <button type="submit" class="btn" id="submit-btn" disabled>Submit</button>
+        </form>
+        
+        <div id="results-container">
+            {% if relevant_incident and relevant_policy %}
+                <div class="results">
+                    <!-- Example result -->
+                    <div class="result-card">
+                        <h3>Relevant Policy</h3>
+                        <p>{{ relevant_policy }}</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Relevant Incident</h3>
+                        <p>{{ relevant_incident }}</p>
+                    </div>
+                </div
+            {% endif %}
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const queryInput = document.getElementById('query');
+            const submitBtn = document.getElementById('submit-btn');
+            const errorMessage = document.getElementById('error-message');
+            
+            queryInput.addEventListener('input', function() {
+                if (queryInput.value.trim().length > 0) {
+                    submitBtn.disabled = false;
+                    errorMessage.style.display = 'none';
+                } else {
+                    submitBtn.disabled = true;
+                    errorMessage.style.display = 'block';
+                }
+            });
+            
+            document.getElementById('query-form').addEventListener('submit', function(e) {
+                if (queryInput.value.trim().length === 0) {
+                    e.preventDefault();
+                    errorMessage.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
