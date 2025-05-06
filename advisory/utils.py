@@ -1,12 +1,34 @@
-from langchain.llms import Ollama
+### DONOT DELETE THIS IS FOR LOCAL##################........................
+
+# from langchain.llms import Ollama
+# from langchain.agents import initialize_agent, Tool, AgentType
+# from langchain.prompts import PromptTemplate
+# import spacy
+
+# nlp = spacy.load("en_core_web_sm")
+
+# # Initialize the Ollama model
+# mixtral_llm = Ollama(model="mistral:7b", base_url="http://localhost:11434")
+
+####### USING API FOR MIXTRAL##########
+from langchain_mistralai import ChatMistralAI
+from langchain.llms import ollama
 from langchain.agents import initialize_agent, Tool, AgentType
 from langchain.prompts import PromptTemplate
 import spacy
 
 nlp = spacy.load("en_core_web_sm")
+from dotenv import load_dotenv
 
-# Initialize the Ollama model
-mixtral_llm = Ollama(model="mistral:7b", base_url="http://localhost:11434")
+from langchain_core.messages import HumanMessage
+
+import os
+
+load_dotenv()
+
+mixtral_llm = ChatMistralAI(
+    mistral_api_key=os.getenv("MISTRAL_API_KEY"), model="mistral-small", temperature=0.7
+)
 
 
 # prompt for filtering
@@ -50,9 +72,15 @@ filter_prompt = PromptTemplate(
 )
 
 
+# def filter_query(input_text):
+#     response = mixtral_llm(filter_prompt.format(input_text=input_text))
+#     return response.strip()
+
+
 def filter_query(input_text):
-    response = mixtral_llm(filter_prompt.format(input_text=input_text))
-    return response.strip()
+    prompt_text = filter_prompt.format(input_text=input_text)
+    response = mixtral_llm.invoke([HumanMessage(content=prompt_text)])
+    return response.content.strip()
 
 
 # For checking names by regex pattern
@@ -120,4 +148,8 @@ def run_agent(user_query):
 
 def rag_generate(context):
     response = mixtral_llm.invoke(context)
-    return response
+
+    if hasattr(response, "content"):
+        return response.content
+    else:
+        return str(response)

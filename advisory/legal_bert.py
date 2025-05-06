@@ -68,6 +68,9 @@ def retrieve_top_k(query, index, embeddings, docs, top_k=3):
 
 # RAG generation
 def generate_incident_summary(incident):
+    if incident is None:
+        return "No incident found."
+
     law_id = incident.get("law_id", "Law ID not available")
     title = incident.get("title", "Title not available")
     description = incident.get("description", "Description not available")
