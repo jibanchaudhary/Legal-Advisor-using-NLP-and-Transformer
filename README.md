@@ -1,4 +1,4 @@
-# Legal-Assistance
+# Legal-Advisor-using-NLP-and-Transformer
 
 Legal Advisor using NLP and Transformer is an AI-powered cyber crime legal advisory system designed to assist users in understanding cyber crime laws, procedures, and legal remedies under Nepal’s Electronic Transactions Act (ETA) 2063.
 
@@ -24,6 +24,7 @@ The system follows a multi-stage NLP pipeline:
 ### Flow Diagram
 
 <img width="846" height="978" alt="flowchart" src="https://github.com/user-attachments/assets/30cb37fc-1a73-44e4-8520-179944db1c8f" />
+
 ### Workflow Steps
 
 1. User submits a natural language query
